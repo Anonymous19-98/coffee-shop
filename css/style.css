@@ -21,6 +21,12 @@
     transition: all .2s linear;
 }
 
+
+section{
+    padding: 2rem 9%;
+}
+
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -86,15 +92,72 @@ html{
 }
 
 
+.home{
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(../img/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
 
 
+.home .row .content{
+    flex: 1 1 42rem;
+}
 
 
+.home .row .image{
+    flex: 1 1 42rem;
+    padding-top: 9rem;
+    text-align: center;
+}
 
 
+.home .row .image img{
+    height: 35rem;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+
+    50%{
+        transform: translateY(-7rem);
+    }
+}
 
 
+.home .row .content h3{
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
 
+.home .image-slider{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.home .image-slider img{
+    height: 9rem;
+    margin: 0 .5rem;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+
+.home .image-slider img:hover{
+    transform: translateY(-2rem);
+}
 
 
 
@@ -112,6 +175,10 @@ html{
     }
     
     .header{
+        padding: 2rem;
+    }
+
+    section{
         padding: 2rem;
     }
 }
@@ -142,6 +209,14 @@ html{
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+
+    .home{
+        text-align: center;
+    }
+
+    .home .row .content h3{
+        font-size: 4rem;
+    }
 }
 
 /* media Queries */
@@ -152,5 +227,10 @@ html{
     
     .header{
         padding: 2rem;
+    }
+
+    .home .row .image img{
+        height: auto;
+        width: 100%;
     }
 }
