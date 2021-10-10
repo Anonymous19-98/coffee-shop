@@ -17,3 +17,26 @@ document.querySelectorAll('.image-slider img').forEach(images => {
     }
 });
 
+
+var swiper = new Swiper(".review-slider", {
+    pagination: {
+    spaceBetween: 20,
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 0,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+      },
+      loop: true,
+      grapCursor: true,
+  });
+
